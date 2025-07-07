@@ -1,0 +1,16 @@
+# Xcode
+*.xcuserdatad/
+*.xcworkspace/xcshareddata/
+DerivedData/
+*.ipa
+*.dSYM.zip
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+.swiftpm/
+
+# macOS
+.DS_Store
