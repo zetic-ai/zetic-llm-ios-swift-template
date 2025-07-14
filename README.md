@@ -54,7 +54,7 @@ pod install
 open ZeticMLangeLLMSample.xcworkspace
 ```
 
-### 3. Configure Credentials
+### 3. Configure
 
 Update your API credentials in `ZeticMLangeLLMSample/Core/Constants/Constants.swift`:
 > If you have no token for SDK, Check [ZeticAI personal settings](https://mlange.zetic.ai/settings?tab=pat)
@@ -68,6 +68,35 @@ struct Constants {
     }
 }
 ```
+
+### 4. Customize Quant Type
+Update Quantization type in `ZeticMLangeLLMSample/ViewModel/LLMChatViewModel.swift`
+
+```swift
+func initModel() {
+  // ...
+  DispatchQueue.global().async {
+    let mlangeModel = try? ZeticMLangeLLMModel(
+        Constants.MLANGE.personalAccessKey,
+        Constants.MLANGE.modelKey,
+        .LLAMA_CPP,
+        .GGUF_QUANT_Q4_K_M // Change Quant type what you want
+    ) { progress in
+  // ...
+
+```
+
+#### Available quant types
+- GGUF_QUANT_F16
+- GGUF_QUANT_BF16
+- GGUF_QUANT_Q8_0
+- GGUF_QUANT_Q6_K
+- GGUF_QUANT_Q4_K_M
+- GGUF_QUANT_Q3_K_M
+- GGUF_QUANT_Q2_K
+- GGUF_QUANT_Q6_K
+
+Check it out [Zetic Model Hub](https://mlange.zetic.ai/dashboard).
 
 ### 4. Customize App Details
 
