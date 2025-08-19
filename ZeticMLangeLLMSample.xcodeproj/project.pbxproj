@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		16555B622E1286920003EA27 /* ZeticMLange in Frameworks */ = {isa = PBXBuildFile; productRef = 16555B612E1286920003EA27 /* ZeticMLange */; };
-		DDC2EABF4CE532B1B26B5E6C /* Pods_ZeticMLangeLLMSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D61E2D5D7B18F7D946F68F /* Pods_ZeticMLangeLLMSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16B8E4CA2E12859D00CF0875 /* ZeticMLangeLLMSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeticMLangeLLMSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4424A676E69677635E3021E0 /* Pods-ZeticMLangeLLMSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeticMLangeLLMSample.release.xcconfig"; path = "Target Support Files/Pods-ZeticMLangeLLMSample/Pods-ZeticMLangeLLMSample.release.xcconfig"; sourceTree = "<group>"; };
-		4DCAD514E4CA117B31B7CD94 /* Pods-ZeticMLangeLLMSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeticMLangeLLMSample.debug.xcconfig"; path = "Target Support Files/Pods-ZeticMLangeLLMSample/Pods-ZeticMLangeLLMSample.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D61E2D5D7B18F7D946F68F /* Pods_ZeticMLangeLLMSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeticMLangeLLMSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -32,7 +29,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16555B622E1286920003EA27 /* ZeticMLange in Frameworks */,
-				DDC2EABF4CE532B1B26B5E6C /* Pods_ZeticMLangeLLMSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +40,6 @@
 			children = (
 				16B8E4CC2E12859D00CF0875 /* ZeticMLangeLLMSample */,
 				16B8E4CB2E12859D00CF0875 /* Products */,
-				A869C000F9E3750ABFEC0A90 /* Pods */,
 				A54FDC35103E553E0752E5EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -65,15 +60,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A869C000F9E3750ABFEC0A90 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4DCAD514E4CA117B31B7CD94 /* Pods-ZeticMLangeLLMSample.debug.xcconfig */,
-				4424A676E69677635E3021E0 /* Pods-ZeticMLangeLLMSample.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,7 +67,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16B8E4D52E12859E00CF0875 /* Build configuration list for PBXNativeTarget "ZeticMLangeLLMSample" */;
 			buildPhases = (
-				A2F7BD531FDA66DA1138E280 /* [CP] Check Pods Manifest.lock */,
 				16B8E4C62E12859D00CF0875 /* Sources */,
 				16B8E4C72E12859D00CF0875 /* Frameworks */,
 				16B8E4C82E12859D00CF0875 /* Resources */,
@@ -147,31 +132,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A2F7BD531FDA66DA1138E280 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZeticMLangeLLMSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16B8E4C62E12859D00CF0875 /* Sources */ = {
@@ -307,13 +267,12 @@
 		};
 		16B8E4D62E12859E00CF0875 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DCAD514E4CA117B31B7CD94 /* Pods-ZeticMLangeLLMSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U89R8B3L26;
+				DEVELOPMENT_TEAM = 8WTTXXB63L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,13 +296,12 @@
 		};
 		16B8E4D72E12859E00CF0875 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4424A676E69677635E3021E0 /* Pods-ZeticMLangeLLMSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U89R8B3L26;
+				DEVELOPMENT_TEAM = 8WTTXXB63L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

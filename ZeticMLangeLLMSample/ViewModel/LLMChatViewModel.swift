@@ -18,24 +18,21 @@ class LLMChatViewModel: ObservableObject {
     func initModel() {
         if mlangeModel != nil { return }
         
-           DispatchQueue.global().async {
-                let mlangeModel = try? ZeticMLangeLLMModel(
-                    Constants.MLANGE.personalAccessKey,
-                    Constants.MLANGE.modelKey,
-                    .LLAMA_CPP,
-                    .GGUF_QUANT_Q4_K_M
-                ) { progress in
-                    DispatchQueue.main.async {
-                        self.progress = progress
-                    }
-                }
-                
+        DispatchQueue.global().async {
+            let mlangeModel = try? ZeticMLangeLLMModel(
+                tokenKey: Constants.MLANGE.personalAccessKey,
+                name: Constants.MLANGE.modelName,
+            ) { progress in
                 DispatchQueue.main.async {
-                    self.mlangeModel = mlangeModel
-                    self.isModelLoaded = true
+                    self.progress = progress
                 }
             }
             
+            DispatchQueue.main.async {
+                self.mlangeModel = mlangeModel
+                self.isModelLoaded = true
+            }
+        }
     }
     
     func sendMessage() {
